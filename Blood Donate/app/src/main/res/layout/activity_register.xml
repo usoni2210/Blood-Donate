@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.twister.blood_donate.RegisterActivity"
+    android:background="@drawable/background"
+    android:padding="35dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_registration"
+        style="@style/auth_title"
+        android:layout_marginTop="55dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/holo_red_dark">
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_name"
+            style="@style/form_EditText"
+            android:layout_marginTop="25dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/holo_red_dark">
+        <EditText
+            android:id="@+id/user_contact_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/txt_contact_no"
+            style="@style/form_EditText"
+            android:layout_marginTop="5dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/holo_red_dark">
+        <EditText
+            android:id="@+id/user_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_dob"
+            android:inputType="date"
+            android:focusable="false"
+            android:longClickable="false"
+            style="@style/form_EditText"
+            android:layout_marginTop="5dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        style="@style/form_EditText"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_gender"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="21sp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/user_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_select_one"
+            android:textSize="21sp"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        style="@style/form_EditText"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_bloodgrp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="21sp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/user_bloodgrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_select_one"
+            android:textSize="21sp"
+            android:textAlignment="center"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_register"
+        style="@style/auth_btn"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"/>
+</LinearLayout>

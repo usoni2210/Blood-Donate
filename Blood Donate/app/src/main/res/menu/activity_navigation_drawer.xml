@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_blood_donor"
+            android:icon="@drawable/icon_blood_donor"
+            android:title="@string/txt_find_blood_donor" />
+
+        <item
+            android:id="@+id/nav_blood_bank"
+            android:icon="@drawable/icon_blood_bank"
+            android:title="@string/txt_find_blood_bank" />
+
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/icon_settings"
+            android:title="@string/txt_setting" />
+    </group>
+
+    <item android:title="@string/txt_communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/icon_share"
+                android:title="@string/txt_share" />
+
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/icon_feedback"
+                android:title="@string/txt_feedback" />
+        </menu>
+    </item>
+
+</menu>

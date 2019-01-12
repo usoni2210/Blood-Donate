@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.twister.blood_donate.EditProfileActivity"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/profile_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profile_edit_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:text="@string/txt_save"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/profile_edit_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:text="@string/txt_cancel"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                tools:ignore="RelativeOverlap" />
+            <RelativeLayout
+                android:id="@+id/layout_image"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp">
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/user_image"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_centerInParent="true"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FFF" />
+
+                <!--ImageView
+                    android:id="@+id/user_edit_image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/icon_edit"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/desc_edit_user_img" /-->
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/edit_profile_title_text"
+                android:inputType="text"
+                android:layout_below="@+id/layout_image"
+                android:backgroundTint="#00000000"
+                tools:targetApi="lollipop"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/user_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/edit_profile_title_text"
+                android:inputType="date"
+                android:focusable="false"
+                android:longClickable="false"
+                android:layout_below="@+id/user_name"
+                android:backgroundTint="#00000000"
+                tools:targetApi="lollipop"
+                tools:ignore="LabelFor" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_email_id"
+            style="@style/edit_profile_detail"
+            android:layout_marginTop="20dp"
+            android:labelFor="@+id/user_email_id"/>
+        <EditText
+            android:id="@+id/user_email_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/edit_profile_value"
+            android:inputType="textEmailAddress"
+            android:focusable="false"
+            android:longClickable="false"
+            tools:ignore="TextFields" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_contact_no"
+            style="@style/edit_profile_detail"
+            android:labelFor="@+id/user_contact_no"/>
+        <EditText
+            android:id="@+id/user_contact_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/edit_profile_value"
+            android:inputType="number"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            style="@style/form_EditText"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_gender"
+                style="@style/edit_profile_detail"
+                android:textSize="21sp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/user_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_select_one"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                style="@style/edit_profile_value"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            style="@style/form_EditText"
+            android:layout_marginBottom="50dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_bloodgrp"
+                android:textSize="21sp"
+                style="@style/edit_profile_detail"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/user_bloodgrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_select_one"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                style="@style/edit_profile_value"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

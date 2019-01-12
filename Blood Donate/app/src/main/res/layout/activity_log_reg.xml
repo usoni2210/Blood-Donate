@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="in.twister.blood_donate.LogRegActivity"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/txt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_log_reg"
+        style="@style/auth_title"
+        android:layout_marginTop="90dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:padding="20dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_email"
+            app:hintAnimationEnabled="true"
+            android:textColorHint="@android:color/holo_red_dark">
+            <EditText
+                android:id="@+id/user_email_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textWebEmailAddress"
+                android:hint="@string/txt_email_id"
+                style="@style/form_EditText"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_pwd"
+            android:textColorHint="@android:color/holo_red_dark"
+            android:layout_below="@+id/layout_email">
+            <in.anshul.libray.PasswordEditText
+                android:id="@+id/user_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/txt_password"
+                style="@style/form_EditText"
+                app:hide_drawable="@drawable/icon_hide_pwd"
+                app:show_drawable="@drawable/icon_show_pwd"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/user_forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_forget_pwd"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_below="@+id/layout_pwd"
+            android:layout_alignEnd="@+id/layout_pwd" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_forget_pwd"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/auth_btn"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_login" />
+
+            <Button
+                android:id="@+id/btn_register"
+                style="@style/auth_btn"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/btn_login"
+                android:text="@string/btn_register" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Blood Donate</string>
+
+    <!-- Text -->
+    <string name="txt_forget_pwd">Forgot Password ?</string>
+    <string name="txt_current_password">Current Password</string>
+    <string name="txt_new_password">New Password</string>
+    <string name="txt_new_password_again">New Password Again</string>
+    <string name="txt_verification">Verification</string>
+    <string name="txt_verification_id">Verification ID</string>
+    <string name="txt_send">Send</string>
+    <string name="txt_title">Topic</string>
+    <string name="txt_message">Message</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_save">Save</string>
+    <string name="txt_select_one">Select One…</string>
+
+    <!-- Button Text -->
+    <string name="btn_login">Login</string>
+    <string name="txt_logout">Logout</string>
+    <string name="btn_register">Register</string>
+    <string name="btn_change_pwd">Change</string>
+    <string name="btn_find_donor">Find Donor</string>
+    <string name="btn_send_otp">Send OTP</string>
+
+    <!-- Title Text -->
+    <string name="title_registration">Registration</string>
+    <string name="title_log_reg">Login or Register</string>
+    <string name="title_change_password">Change Password</string>
+    <string name="title_forget_password">Forgot Password</string>
+    <string name="title_details_of_receiver">Details of Receiver</string>
+
+    <!--User Details-->
+    <string name="txt_name">Name</string>
+    <string name="txt_email_id">Email ID</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_contact_no">Phone No</string>
+    <string name="txt_dob">Date of Birth</string>
+    <string name="txt_gender">Gender</string>
+    <string name="txt_bloodgrp">Blood Group</string>
+
+    <!--Navigation-->
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="title_activity_navigation">Blood Donate</string>
+
+    <!--Navigation Drawer-->
+    <string name="txt_find_blood_donor">Blood Donor</string>
+    <string name="txt_find_blood_bank">Blood Bank</string>
+    <string name="txt_setting">Setting</string>
+    <string name="txt_communicate">Communicate</string>
+    <string name="txt_share">Share</string>
+    <string name="txt_feedback">Feedback</string>
+    <string name="txt_guest">Guest</string>
+
+    <!-- Image Description-->
+    <string name="desc_btn_call" translatable="false">Call Button</string>
+    <string name="desc_map_button" translatable="false">Map Button</string>
+    <string name="desc_user_is_donor" translatable="false">user is Donor</string>
+    <string name="desc_edit_user_img" translatable="false">Edit User Image</string>
+    <string name="desc_back_arrow" translatable="false">Back Arrow</string>
+    <string name="desc_edit_profile" translatable="false">Edit Profile</string>
+    <string name="desc_app_logo" translatable="false">App Logo</string>
+    <string name="desc_gender_image" translatable="false">Gender Image</string>
+
+    <!--Option Text-->
+    <string name="option_yes">Yes</string>
+    <string name="option_no">No</string>
+
+    <string name="option_enable">Enable</string>
+    <string name="option_ignore">Ignore</string>
+
+    <string-array name="gender_option">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="bloodgrp_option">
+        <item>O Positive</item>
+        <item>O Negative</item>
+        <item>A Positive</item>
+        <item>A Negative</item>
+        <item>B Positive</item>
+        <item>B Negative</item>
+        <item>AB Positive</item>
+        <item>AB Negative</item>
+    </string-array>
+
+    <!--About Blood Donate default Article-->
+    <string-array name="default_Article">
+        <item>Why give blood</item>
+        <item>
+            &lt;p>Giving blood saves lives. The blood you give is a lifeline in an emergency and for people who need long-term treatments.&lt;/p>
+            &lt;p>Many people would not be alive today if donors had not generously given their blood.&lt;/p>
+        </item>
+    </string-array>
+
+    <!--Setting Text-->
+    <string name="setting_txt_donating_blood">Donating Blood</string>
+    <string name="txt_language">Language</string>
+    <string name="txt_need_permission_to_call">Need Permission to call</string>
+    <string name="txt_alert">Alert</string>
+    <string name="txt_not_reg_or_log_want_to">You are not a Registered User\n\nWant to Login or Register ?</string>
+    <string name="txt_no_profile_change">No Profile Changes are Made</string>
+    <string name="title_require_gps">Enable GPS</string>
+    <string name="msg_enable_gps">Please enable GPS</string>
+    <string name="txt_sorry_not_available">Sorry\nNot Available</string>
+</resources>

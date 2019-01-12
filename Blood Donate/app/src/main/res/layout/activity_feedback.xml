@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.twister.blood_donate.FeedbackActivity"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/nav_txt"
+        android:id="@+id/appBarLayout">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true"
+            android:textColorHint="@android:color/holo_red_dark">
+            <EditText
+                android:id="@+id/feedback_topic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:inputType="text"
+                android:hint="@string/txt_title"
+                android:layout_marginTop="20dp" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true"
+            android:textColorHint="@android:color/holo_red_dark">
+            <EditText
+                android:id="@+id/feedback_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="5"
+                android:scrollbars="vertical"
+                android:inputType="textMultiLine"
+                android:hint="@string/txt_message"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginTop="20dp"
+                android:gravity="top|start"/>
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/btn_send_feedback"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/txt_send"
+            style="@style/auth_btn"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+</LinearLayout>

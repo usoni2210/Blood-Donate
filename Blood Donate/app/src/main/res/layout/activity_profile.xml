@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.twister.blood_donate.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/profile_bg">
+            <ImageView
+                android:id="@+id/profile_back"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/icon_back"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/desc_back_arrow" />
+            <ImageView
+                android:id="@+id/edit_profile"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_edit"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="15dp"
+                android:contentDescription="@string/desc_edit_profile" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/user_image"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                app:civ_border_color="#FFF"
+                app:civ_border_width="2dp" />
+
+            <ImageView
+                android:id="@+id/user_isdonor"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignBottom="@+id/user_image"
+                android:layout_alignEnd="@+id/user_image"
+                android:contentDescription="@string/desc_user_is_donor" />
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/profile_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_image" />
+
+            <TextView
+                android:id="@+id/user_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_email_id"
+            style="@style/profile_detail"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/user_email_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/profile_value"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_contact_no"
+            style="@style/profile_detail"/>
+        <TextView
+            android:id="@+id/user_contact_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/profile_value"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_gender"
+            style="@style/profile_detail"/>
+        <TextView
+            android:id="@+id/user_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/profile_value"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_bloodgrp"
+            style="@style/profile_detail"/>
+        <TextView
+            android:id="@+id/user_bloodgrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/profile_value"/>
+
+        <View style="@style/Divider"
+            android:layout_marginTop="30dp"/>
+
+        <!-- To change Password -->
+        <TextView
+            android:id="@+id/txt_change_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_change_password"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/block_change_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintAnimationEnabled="true"
+                android:textColorHint="@android:color/holo_red_dark">
+                <in.anshul.libray.PasswordEditText
+                    android:id="@+id/current_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/txt_current_password"
+                    app:hide_drawable="@drawable/icon_hide_pwd"
+                    app:show_drawable="@drawable/icon_show_pwd"
+                    app:password_visible="false"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintAnimationEnabled="true"
+                android:textColorHint="@android:color/holo_red_dark">
+                <in.anshul.libray.PasswordEditText
+                    android:id="@+id/new_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/txt_new_password"
+                    app:hide_drawable="@drawable/icon_hide_pwd"
+                    app:show_drawable="@drawable/icon_show_pwd"
+                    app:password_visible="false"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintAnimationEnabled="true"
+                android:textColorHint="@android:color/holo_red_dark">
+                <in.anshul.libray.PasswordEditText
+                    android:id="@+id/new_pwd_again"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/txt_new_password_again"
+                    app:hide_drawable="@drawable/icon_hide_pwd"
+                    app:show_drawable="@drawable/icon_show_pwd"
+                    app:password_visible="false"/>
+            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:id="@+id/user_forget_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_forget_pwd"
+                android:layout_gravity="end"/>
+            <Button
+                android:id="@+id/btn_change_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_change_pwd"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_dark"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/user_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_logout"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
